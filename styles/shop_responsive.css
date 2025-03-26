@@ -1,0 +1,145 @@
+@media screen and (max-width: 780px) {
+    .super_container .discs .container .discs_row .row-1 .mb-4 {
+        position: relative;
+        width: 33%;
+        padding-right: 10px;
+        padding-left: 10px;
+        height: 52%;
+        margin-bottom: 10px;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom {
+        width: 100%;
+        height: 100%;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom img {
+        width: 100%;
+        height: 50%;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom h4 {
+        font-size: 15px;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom .card-text {
+        font-size: 10px;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom .input-group {
+        font-size: 10px;
+        width: 100%;
+        height: 20px;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom .input-group button {
+        font-size: 12px;
+        height: 65%
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom .input-group span input {
+        font-size: 12px;
+        height: 20px;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom .btn-group-toggle {
+        height: 20px;
+        width: 75%;
+        display: inline-flex;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom .btn-light {
+        height: 100%;
+        width: 25%;
+        font-size: 10px;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom .add-to-cart {
+        height: 25px;
+        width: 100%;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    .super_container .discs .container .row-2 {
+        margin-top: 60px;
+    }
+    .super_container .discs .container .row-2 section h1 {
+        font-size: 30px;
+    }
+    .super_container .discs .container .row-2 section h4 {
+        font-size: 15px;
+    }
+    .super_container .discs .container .row-2 section button {
+        font-size: 12px;
+    }
+    .super_container .discs .container .row-2 table {
+        font-size: 10px;
+    }
+    .super_container .discs .container .row-2 table tbody tr td button{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .super_container .discs .container .discs_row .row-1 .mb-4 {
+        position: relative;
+        width: 49%;
+        padding-right: 10px;
+        padding-left: 10px;
+        height: 35%;
+        margin-bottom: 10px;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom {
+        width: 100%;
+        height: 100%;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom img {
+        width: 100%;
+        height: 50%;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom h4 {
+        font-size: 15px;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom .card-text {
+        font-size: 10px;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom .input-group {
+        font-size: 10px;
+        width: 100%;
+        height: 20px;
+        margin-top: 10px;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom .input-group button {
+        font-size: 12px;
+        height: 65%
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom .input-group span #inputQuantity1 {
+        font-size: 12px;
+        height: 20px;
+        margin-top: 8px;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom .btn-group-toggle {
+        height: 20px;
+        width: 75%;
+        display: inline-flex;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom .btn-light {
+        height: 100%;
+        width: 25%;
+        font-size: 10px;
+    }
+    .super_container .discs .container .discs_row .row-1 .mb-4 .card-custom .add-to-cart {
+        height: 25px;
+        width: 100%;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+    .super_container .discs .container .row-2 {
+        margin-top: 115px;
+    }
+    .super_container .discs .container .row-2 section h1 {
+        font-size: 18px;
+    }
+    .super_container .discs .container .row-2 section h4 {
+        font-size: 10px;
+    }
+    .super_container .discs .container .row-2 section button {
+        font-size: 10px;
+    }
+    .super_container .discs .container .row-2 table {
+        font-size: 5.9px;
+    }
+    .super_container .discs .container .row-2 table tbody tr td button{
+        font-size: 6px;
+    }
+}
