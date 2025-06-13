@@ -1,125 +1,95 @@
+<?php
+include 'includes/config.php';
+include 'includes/functions.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Ciria | Discografía Oficial</title>
+    <title>Ciria Music Player</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Mixtape template project">
+    <meta name="description" content="Reproductor musical oficial de Ciria">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
-    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-    <link rel="stylesheet" type="text/css" href="styles/about.css">
-    <link rel="stylesheet" type="text/css" href="styles/about_responsive.css">
-    <?php
-    require_once __DIR__ . '/includes/config.php';
-    require_once __DIR__ . '/includes/functions.php';
-    ?>
+    <link rel="stylesheet" type="text/css" href="styles/musicApp.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <div class="super_container">
-        <!-- Header -->
-		<header class="header">
-			<div class="header_content d-flex flex-row align-items-center justify-content-center">
-				<div></div>
-				<div class="logo"><img src="images/Logos/LogoNegro.jpg" alt="Girl in a jacket" width="100" height="80">
-					<a href="/">Ciria</a></div>
-				<nav class="main_nav">
-					<ul class="d-flex flex-row align-items-start justify-content-start">
-						<li><a href="/">Inicio</a></li>
-						<li class="active"><a href="music.php">Música</a></li>
-						<li><a href="contact.php">Contacto</a></li>
-					</ul>
-				</nav>
-				<div class="hamburger ml-auto">
-					<div class="d-flex flex-column align-items-end justify-content-between">
-						<div></div>
-						<div></div>
-						<div></div>
-					</div>
-				</div>
-			</div>
-		</header>
+    <header>
+        <div class="menu_side">
+            <h6 id="menu_list_active_button"><i class="bi bi-music-note-list"></i></h6>
+            <div class="user">
+                <a href="/" title="Ciria">
+                    <img src="images/Logos/LogoNegro.jpg" alt="Ciria" loading="lazy">
+                </a>
+                <h1>Ciria</h1>
+            </div>
+            <div class="playlist">
+                <h4 class="active"><span></span><i class="bi bi-music-note-beamed"></i>Playlists</h4>
+            </div>
+            <div class="menu_song">
+                <?php foreach ($albums as $album) {
+                    echo generateAlbumItem($album);
+                } ?>
+            </div>
+        </div>
+        
+        <div class="song_side">
+            <nav>
+                <ul>
+                    <li>Toda mi música<span></span></li>
+                </ul>
+            </nav>
 
-        <!-- Menu -->
-	
-		<div class="menu">
-			<div>
-				<div class="menu_overlay"></div>
-				<div class="menu_container d-flex flex-column align-items-start justify-content-center">
-					<nav class="menu_nav">
-						<ul class="d-flex flex-column align-items-start justify-content-start">
-							<li><a href="/">Inicio</a></li>
-							<li><a href="music.php">Música</a></li>
-							<li><a href="contact.php">Contacto</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
+            <?php foreach ($albums as $album) {
+                echo generateAlbumSection($album);
+            } ?>
 
-        <!-- Home -->
-
-        <div class="home">
-                <div class="home_inner">
-                    <div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/Logos/FondoPrincipal2.jpg" data-speed="0.8"></div>
-                    <div class="home_container">
-                        <div class="home_content text-center">
-                            <div class="home_title">Música</div>
-                        </div>
+            <div class="popular_artists">
+                <div class="h4">
+                    <h4>Productores</h4>
+                    <div class="bts_s">
+                        <i class="bi bi-arrow-left" id="left_scroll"></i>
+                        <i class="bi bi-arrow-right" id="right_scroll"></i>
                     </div>
                 </div>
+                <div class="item">
+                    <?php foreach ($producers as $producer) {
+                        echo generateProducerItem($producer);
+                    } ?>
+                </div>
             </div>
+        </div>
 
-            <!-- Discs -->
+        <!-- Reproductor principal -->
+        <div class="master_play">
+            <img src="images/Logos/Canciones/1.png" alt="Portada" id="poster_master_play">
+            <h5 id="title">Intro
+                <div class="subtitle">Calendario Terapéutico</div>
+            </h5>
+            <div class="icon">
+                <i class="bi bi-skip-start-fill" id="back"></i>
+                <i class="bi bi-play-fill" id="masterPlay"></i>
+                <i class="bi bi-skip-end-fill" id="next"></i>
+            </div>
+            <span id="currentStart">0:00</span>
+            <div class="bar">
+                <input type="range" id="seek" min="0" value="0" max="100">
+                <div class="bar2" id="bar2"></div>
+            </div>
+            <span id="currentEnd">0:00</span>
+            <div class="vol">
+                <i class="bi bi-volume-down-fill" id="vol_icon"></i>
+                <input type="range" id="vol" min="0" value="30" max="100">
+            </div>
+        </div>
+    </header>
 
-	<div class="discs">
-		<div class="container">
-			<div class="row discs_row">
-            <?php
-            foreach ($discos as $disco) {
-                generarDisco(
-                    $disco['imagen'],
-                    'Logo',
-                    $disco['titulo'],
-                    $disco['enlace']
-                );
-            }
-            ?>
-			</div>
-			<span><a href="musicApp.php" class="boton">Abrir reproductor</a></span>
-		</div>
-	</div>
-	
-	<!-- Footer -->
-	<footer class="footer">
-		<div class="footer_container d-flex flex-xl-row flex-column align-items-start justify-content-start">
-		</div>
-		<div class="copyright_bar">
-			<span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-			</span>
-		</div>
-	</footer>
-</div>
-
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap-4.1.2/popper.js"></script>
-<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="plugins/progressbar/progressbar.min.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="plugins/jPlayer/jquery.jplayer.min.js"></script>
-<script src="plugins/jPlayer/jplayer.playlist.min.js"></script>
-<script src="js/about.js"></script>
+    <script src="js/musicApp.js"></script>
+    <script>
+    const albumsData = <?= json_encode($albums) ?>;
+    </script>
 </body>
 </html>
+
+
+
+

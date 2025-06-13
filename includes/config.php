@@ -1,4 +1,24 @@
 <?php
+
+$indexConfig =  [
+    'title' => 'Ciria',
+    'description' => 'Mixtape template project',
+    'menu' => [
+        'inicio' => 'Inicio',
+        'discografia' => 'Discografía',
+        'reproductor' => 'Reproductor',
+        'contacto' => 'Contacto',
+    ],
+    'featured_title' => 'Últimos lanzamientos',
+    'artist_name' => 'C i r i a',
+    'artist_text' => [
+        'Escribo como terapia, como hobbie...',
+        'Mi diario terapéutico...',
+        'La gente muere cada día...',
+        'Para mis seres queridos...',
+    ],
+];
+
 $albums = [
     [
         'id' => 1,
@@ -31,7 +51,7 @@ $albums = [
         ]
     ],
     [
-        'id' => 22,
+        'id' => 2,
         'title' => 'Relatos de un Finde',
         'image' => 'images/Logos/FondoPrincipal2.jpg',
         'artist' => 'Ciria',
@@ -44,16 +64,45 @@ $albums = [
             ['id' => 26, 'title' => 'Domingo Mañana', 'file' => 'music/Relatos De Un Finde/26.mp3', 'image' => 'images/Logos/FondoPrincipal2.jpg'],
             ['id' => 27, 'title' => 'Domingo Tarde', 'file' => 'music/Relatos De Un Finde/27.mp3', 'image' => 'images/Logos/FondoPrincipal2.jpg']
         ]
+    ]
+];
+
+$featured_songs = [
+    [
+        'title' => "Control Vital",
+        'artist' => "Ciria",
+        'file' => "music/Calendario Terapeutico/10.mp3",
+        'duration' => "3.21"
     ],
     [
-        'id' => 28,
-        'title' => 'Sencillos',
-        'image' => 'images/Logos/FondoPrincipal1.png',
-        'artist' => 'Ciria',
-        'directory' => 'Sencillos',
-        'songs' => [
-            ['id' => 28, 'title' => 'Sencillo 1', 'file' => 'music/Sencillos/28.mp3', 'image' => 'images/Logos/FondoPrincipal1.png']
-        ]
+        'title' => "Habanos",
+        'artist' => "Ciria",
+        'file' => "music/Calendario Terapeutico/16.mp3",
+        'duration' => "3.15"
+    ],
+    [
+        'title' => "Excusas",
+        'artist' => "Ciria",
+        'file' => "music/Calendario Terapeutico/15.mp3",
+        'duration' => "3.18"
+    ],
+    [
+        'title' => "Si Muero Mañana",
+        'artist' => "Ciria",
+        'file' => "music/Calendario Terapeutico/14.mp3",
+        'duration' => "3.47"
+    ],
+    [
+        'title' => "Viento en Popa",
+        'artist' => "Ciria",
+        'file' => "music/Calendario Terapeutico/21.mp3",
+        'duration' => "2.35"
+    ],
+    [
+        'title' => "La Fe de los Reales",
+        'artist' => "Ciria",
+        'file' => "music/Calendario Terapeutico/19.mp3",
+        'duration' => "2.51"
     ]
 ];
 
@@ -86,17 +135,10 @@ $discos = [
     [
         'imagen' => 'images/Logos/LogoNegro.jpg',
         'titulo' => 'Calendario Terapéutico',
-        'enlace' => 'single.html'
     ],
     [
         'imagen' => 'images/Logos/LogoNegro.jpg',
         'titulo' => 'Relatos de un Finde',
-        'enlace' => 'single2.html'
-    ],
-    [
-        'imagen' => 'images/Logos/LogoNegro.jpg',
-        'titulo' => 'Sencillos',
-        'enlace' => 'single3.html'
     ]
 ];
 
@@ -117,6 +159,12 @@ $contactos = [
         'tipo' => 'Telegram',
         'dato' => '@aciria',
         'icono' => 'fab fa-telegram',
+        'enlace' => 'https://t.me/aciria'
+    ],
+    [
+        'tipo' => 'Spotify',
+        'dato' => '@aciria',
+        'icono' => 'fab fa-spotify',
         'enlace' => 'https://t.me/aciria'
     ],
     [
