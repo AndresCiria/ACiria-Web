@@ -1440,15 +1440,17 @@ section
 }
 .featured_album_image {
     position: relative;
-    width: calc(100% + 42px);
-    height: 722px;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
     overflow: hidden;
 }
 .featured_img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
+    position: relative;
+    z-index: 0;
 }
 .image_overlay {
     position: absolute;
@@ -1456,9 +1458,10 @@ section
     right: 0;
     width: 100%;
     height: 100%;
-    background: #de4f32;
-    z-index: 1;
+    background: rgba(222, 79, 50, 0);
+	z-index: 1;
     transition: all 1200ms ease;
+	pointer-events: none;
 }
 .image_overlay.active {
     width: 0%;

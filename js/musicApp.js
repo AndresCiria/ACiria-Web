@@ -250,3 +250,82 @@ function playPrevious() {
     const prevIndex = (currentIndex - 1 + allSongs.length) % allSongs.length;
     playSong(allSongs[prevIndex].appIndex);
 }
+
+document.querySelectorAll('.pop_song').forEach(slider => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.style.cursor = 'grabbing';
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.style.cursor = 'grab';
+    });
+
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.style.cursor = 'grab';
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2;
+        slider.scrollLeft = scrollLeft - walk;
+    });
+
+    slider.addEventListener('touchstart', (e) => {
+        isDown = true;
+        startX = e.touches[0].pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener('touchend', () => {
+        isDown = false;
+    });
+
+    slider.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2;
+        slider.scrollLeft = scrollLeft - walk;
+    });
+});
+
+music.addEventListener('timeupdate', () => {
+    const progress = (music.currentTime / music.duration) * 100;
+    document.getElementById('bar2').style.width = `${progress}%`;
+    document.querySelector('.bar .dot').style.left = `${progress}%`;
+});
+
+vol.addEventListener('input', () => {
+    const volume = vol.value;
+    document.querySelector('.vol_bar').style.width = `${volume}%`;
+    document.getElementById('vol_dot').style.left = `${volume}%`;
+});
+
+function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+}
+
+music.addEventListener('timeupdate', () => {
+    currentStart.textContent = formatTime(music.currentTime);
+    
+    if (music.duration && music.duration !== Infinity) {
+        currentEnd.textContent = formatTime(music.duration);
+    }
+});
+
+music.addEventListener('ended', () => {
+    next.click();
+});

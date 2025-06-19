@@ -412,7 +412,7 @@ $contactos = [
         'tipo' => 'Instagram',
         'dato' => '@_aciria_',
         'icono' => 'fab fa-instagram',
-        'enlace' => 'https://instagram.com/_aciria_:'
+        'enlace' => 'https://instagram.com/_aciria_'
     ],
     [
         'tipo' => 'Soundcloud',

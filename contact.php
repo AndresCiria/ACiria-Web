@@ -29,5 +29,4 @@ includeTemplate('header', ['config' => $indexConfig]);
 		</div>
 	</div>
 
-<script src="js/contact.js"></script>
 <?php includeTemplate('footer', ['config' => $indexConfig]);?>

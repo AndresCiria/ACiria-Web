@@ -43,7 +43,7 @@ header .song_side {
     width: 100%;
     background: #0b1320;
     overflow: auto;
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 header .master_play {
@@ -160,7 +160,7 @@ header .master_play span {
 }
 
 header .master_play #currentStart {
-    margin: 0px 0px 0px 20px;
+    margin: 0px 0px 0px 10px;
 }
 
 header .master_play .bar {
@@ -218,7 +218,7 @@ header .master_play .vol {
     position: relative;
     width: 100px;
     height: 2px;
-    margin-left: 50px;
+    margin-left: 100px;
     background-color: rgb(105, 105, 170,.1);
 }
 
@@ -499,8 +499,11 @@ header .song_side .popular_song .pop_song {
     height: 150px;
     display: flex;
     overflow-x: auto;
-    scroll-behavior: smooth;
-    overflow: hidden;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab; /* Cambia cursor a "mano para arrastrar" */
 }
 
 header .song_side .popular_song .pop_song::-webkit-scrollbar {
@@ -613,3 +616,44 @@ header .song_side .popular_artists .item li img {
     position: absolute;
 }
 
+@media (max-width: 768px) {
+    header .master_play {
+        height: 85px !important;
+        padding: 0 10px !important;
+    }
+
+    header .master_play img,
+    header .master_play h5 {
+        display: none !important;
+    }
+
+    header .master_play .icon {
+        margin: 0 5px !important;
+        font-size: 16px !important;
+    }
+
+    header .master_play .bar {
+        width: 50% !important;
+        margin: 0 1px !important;
+    }
+    header .master_play .bar,
+    header .master_play .vol {
+        height: 4px !important;
+    }
+
+    header .master_play .vol {
+        width: 60px !important;
+        margin-left: 30px !important;
+    }
+    header .master_play .vol .bi {
+        font-size: 18px !important;
+        top: -12px !important;
+        left: -20px !important;
+    }
+
+    header .master_play #currentStart,
+    header .master_play #currentEnd {
+        font-size: 10px !important;
+        min-width: 25px !important;
+    }
+}

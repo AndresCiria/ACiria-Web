@@ -31,10 +31,6 @@ include 'includes/functions.php';
             <div class="popular_artists">
                 <div class="h4">
                     <h4>Productores</h4>
-                    <div class="bts_s">
-                        <i class="bi bi-arrow-left" id="left_scroll"></i>
-                        <i class="bi bi-arrow-right" id="right_scroll"></i>
-                    </div>
                 </div>
                 <div class="item">
                     <?php foreach ($producers as $producer) {

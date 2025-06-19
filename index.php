@@ -6,5 +6,4 @@ echo renderMusicPlayer($albums, 2);
 generarSeccionArtista($indexConfig);
 ?>
 	
-<script src="js/index.js"></script>
 <?php includeTemplate('footer', ['config' => $indexConfig]);?>

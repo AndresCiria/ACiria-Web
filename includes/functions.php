@@ -24,10 +24,6 @@ function generateAlbumSection($album) {
     <div class="popular_song">
         <div class="h4">
             <h4><?= $album['title'] ?></h4>
-            <div class="bts_s">
-                <i class="bi bi-arrow-left scroll-left" data-album="<?= $album['id'] ?>"></i>
-                <i class="bi bi-arrow-right scroll-right" data-album="<?= $album['id'] ?>"></i>
-            </div>
         </div>
         <div class="pop_song">
             <?php foreach ($album['songs'] as $song) {
@@ -130,7 +126,7 @@ function renderMusicPlayer($albums, $albumId) {
     }
 
     ob_start(); ?>
-    º
+
     <div class="featured_album">
         <div class="background_image featured_background"></div>
         <div class="container">
@@ -140,7 +136,7 @@ function renderMusicPlayer($albums, $albumId) {
                 <div class="col-md-6">
                     <div class="featured_album_image">
                         <div class="image_overlay"></div>
-                        <img src="../images/Logos/plz.jpg" alt="<?= htmlspecialchars($album['title']) ?>" class="featured_img">
+                        <img src="images/Logos/plz.jpg" class="featured_img">
                     </div>
                 </div>
 
@@ -221,7 +217,7 @@ function generarAlbum($albumId, $albums) {
                                     <span><a href="<?= $config['download_link'] ?>" class="lyrics-btn">Descargar</a></span>
                                 </li>
                             </ul>
-                        </div>
+                        </div><br>
                         <?php if (!empty($config['youtube_intro'])): ?>
                         <div class="video_gallery mt-4">
                             <h4>Instrumental</h4>
