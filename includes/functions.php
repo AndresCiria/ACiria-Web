@@ -220,7 +220,6 @@ function generarAlbum($albumId, $albums) {
                         </div><br>
                         <?php if (!empty($config['youtube_intro'])): ?>
                         <div class="video_gallery mt-4">
-                            <h4>Instrumental</h4>
                             <div class="row">
                                 <div class="col-md-9 mb-3">
                                     <div class="video-container">
@@ -293,7 +292,7 @@ function generarSeccionArtista($config) {
                         
                         echo '
                         </div>
-                        <div class="artist_sig"><img src="images/sig.png" alt="Firma"></div>
+                        <div class="artist_sig"><img src="images/sig.png" alt=""></div>
                     </div>
                 </div>
             </div>

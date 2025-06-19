@@ -23,7 +23,9 @@ $albums = [
     [
         'id' => 1,
         'title' => 'Calendario Terapéutico',
-        'description' => 'Un viaje por estos cuatro años desde que empece a escribir un recorrido por mi vida',
+        'description' => 'Un viaje durante cuatro años, desde que empece a escribir con vergüenza y desconocimiento, hasta que me decidí
+                          a grabar un disco yo solo en casa. Entendiendo que escribir mis mierdas se vuelve imprescindible. Se trata 
+                          de un recorrido por buenos y malos momentos, caidas, traumas, ideas, reflexiones. Mi Calendario Terapéutico.',
         'image' => 'images/Logos/Canciones/Calendario Terapéutico/1.jpg',
         'artist' => 'Ciria',
         'year' => '2020/21/22/23',
@@ -250,7 +252,8 @@ $albums = [
     [
         'id' => 2,
         'title' => 'Relatos de un Finde',
-        'description' => 'Mixtape escrito durante un fin de semana con sus subidas y bajadas',
+        'description' => 'Subidas, bajadas, fiesta, resaca, te recuperas y vuelta a empezar, típico fin de semana 
+                          en el que empiezas en lo más alto, caes y te levantas.',
         'image' => 'images/Logos/Relatos.jpg',
         'artist' => 'Ciria',
         'directory' => 'Relatos De Un Finde',
@@ -414,24 +417,24 @@ $contactos = [
         'icono' => 'fab fa-instagram',
         'enlace' => 'https://instagram.com/_aciria_'
     ],
-    [
-        'tipo' => 'Soundcloud',
-        'dato' => '@aciria',
-        'icono' => 'fab fa-soundcloud',
-        'enlace' => 'https://soundcloud.com/aciria'
-    ],
-    [
-        'tipo' => 'Spotify',
-        'dato' => '@aciria',
-        'icono' => 'fab fa-spotify',
-        'enlace' => 'https://t.me/aciria'
-    ],
-    [
-        'tipo' => 'Ko-Fi',
-        'dato' => 'Apóyame en Ko-Fi',
-        'icono' => 'fas fa-coffee',
-        'enlace' => 'https://ko-fi.com/aciria'
-    ]
+    // [
+    //     'tipo' => 'Soundcloud',
+    //     'dato' => '@aciria',
+    //     'icono' => 'fab fa-soundcloud',
+    //     'enlace' => 'https://soundcloud.com/aciria'
+    // ],
+    // [
+    //     'tipo' => 'Spotify',
+    //     'dato' => '@aciria',
+    //     'icono' => 'fab fa-spotify',
+    //     'enlace' => 'https://t.me/aciria'
+    // ],
+    // [
+    //     'tipo' => 'Ko-Fi',
+    //     'dato' => 'Apóyame en Ko-Fi',
+    //     'icono' => 'fas fa-coffee',
+    //     'enlace' => 'https://ko-fi.com/aciria#'
+    // ]
 ];
 
 ?>
