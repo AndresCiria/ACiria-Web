@@ -1,7 +1,3 @@
-<?php
-include 'includes/config.php';
-include 'includes/functions.php';
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,32 +8,21 @@ include 'includes/functions.php';
     <link rel="stylesheet" type="text/css" href="styles/musicApp.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+<?php
+include 'includes/config.php';
+include 'includes/functions.php';
+?>
 <body>
     <header>
-        <div class="menu_side">
-            <h6 id="menu_list_active_button"><i class="bi bi-music-note-list"></i></h6>
+        <div class="song_side">
             <div class="user">
                 <a href="/" title="Ciria">
                     <img src="images/Logos/LogoNegro.jpg" alt="Ciria" loading="lazy">
+                    <h1>ACiria</h1>
                 </a>
-                <h1>Ciria</h1>
+                
             </div>
-            <div class="playlist">
-                <h4 class="active"><span></span><i class="bi bi-music-note-beamed"></i>Playlists</h4>
-            </div>
-            <div class="menu_song">
-                <?php foreach ($albums as $album) {
-                    echo generateAlbumItem($album);
-                } ?>
-            </div>
-        </div>
-        
-        <div class="song_side">
-            <nav>
-                <ul>
-                    <li>Toda mi música<span></span></li>
-                </ul>
-            </nav>
+            
 
             <?php foreach ($albums as $album) {
                 echo generateAlbumSection($album);
@@ -61,7 +46,7 @@ include 'includes/functions.php';
 
         <!-- Reproductor principal -->
         <div class="master_play">
-            <img src="images/Logos/Canciones/1.png" alt="Portada" id="poster_master_play">
+            <img src="images/Logos/Canciones/Calendario Terapéutico/1.jpg" alt="Portada" id="poster_master_play">
             <h5 id="title">Intro
                 <div class="subtitle">Calendario Terapéutico</div>
             </h5>
@@ -74,19 +59,22 @@ include 'includes/functions.php';
             <div class="bar">
                 <input type="range" id="seek" min="0" value="0" max="100">
                 <div class="bar2" id="bar2"></div>
+                <div class="dot"></div>
             </div>
             <span id="currentEnd">0:00</span>
             <div class="vol">
-                <i class="bi bi-volume-down-fill" id="vol_icon"></i>
-                <input type="range" id="vol" min="0" value="30" max="100">
+				<i class="bi bi-volume-down-fill" id="vol_icon"></i>
+				<input type="range" id="vol" min="0" value="50" max="100">
+				<div class="vol_bar"></div>
+				<div class="dot" id="vol_dot"></div>
             </div>
         </div>
     </header>
-
-    <script src="js/musicApp.js"></script>
     <script>
-    const albumsData = <?= json_encode($albums) ?>;
+        window.albumsData = <?php echo json_encode($albums); ?>;
+        console.log('Datos pasados desde PHP:', window.albumsData);
     </script>
+    <script src="js/musicApp.js"></script>
 </body>
 </html>
 

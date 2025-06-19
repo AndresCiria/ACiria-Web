@@ -1438,3 +1438,28 @@ section
 	color: #6d6d6d;
 	line-height: 67px;
 }
+.featured_album_image {
+    position: relative;
+    width: calc(100% + 42px);
+    height: 722px;
+    overflow: hidden;
+}
+.featured_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.image_overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #de4f32;
+    z-index: 1;
+    transition: all 1200ms ease;
+}
+.image_overlay.active {
+    width: 0%;
+}
