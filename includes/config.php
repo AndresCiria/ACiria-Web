@@ -252,8 +252,9 @@ $albums = [
     [
         'id' => 2,
         'title' => 'Relatos de un Finde',
-        'description' => 'Subidas, bajadas, fiesta, resaca, te recuperas y vuelta a empezar, típico fin de semana 
-                          en el que empiezas en lo más alto, caes y te levantas.',
+        'description' => 'Subidas, bajadas, fiesta, resaca, te recuperas y vuelta a empezar, otro finde 
+                          en el que empiezas en lo más alto, caes, y te levantas. 
+                          Porque eso lo único importante, levantarse',
         'image' => 'images/Logos/Relatos.jpg',
         'artist' => 'Ciria',
         'directory' => 'Relatos De Un Finde',
@@ -417,24 +418,18 @@ $contactos = [
         'icono' => 'fab fa-instagram',
         'enlace' => 'https://instagram.com/_aciria_'
     ],
-    // [
-    //     'tipo' => 'Soundcloud',
-    //     'dato' => '@aciria',
-    //     'icono' => 'fab fa-soundcloud',
-    //     'enlace' => 'https://soundcloud.com/aciria'
-    // ],
-    // [
-    //     'tipo' => 'Spotify',
-    //     'dato' => '@aciria',
-    //     'icono' => 'fab fa-spotify',
-    //     'enlace' => 'https://t.me/aciria'
-    // ],
-    // [
-    //     'tipo' => 'Ko-Fi',
-    //     'dato' => 'Apóyame en Ko-Fi',
-    //     'icono' => 'fas fa-coffee',
-    //     'enlace' => 'https://ko-fi.com/aciria#'
-    // ]
+    [
+        'tipo' => 'Spotify',
+        'dato' => 'Ciria',
+        'icono' => 'fab fa-spotify',
+        'enlace' => 'https://open.spotify.com/artist/1PaTirbdzdZHuJEp00yxJN?si=g5XI2rruRFWb8BNh6DDmFg'
+    ],
+    [
+        'tipo' => 'Ko-Fi',
+        'dato' => 'Apóyame en Ko-Fi',
+        'icono' => 'fas fa-coffee',
+        'enlace' => 'https://ko-fi.com/aciria#'
+    ]
 ];
 
 ?>

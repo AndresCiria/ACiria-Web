@@ -18,7 +18,7 @@ include 'includes/functions.php';
             <div class="user">
                 <a href="/" title="Ciria">
                     <img src="images/Logos/LogoNegro.jpg" alt="Ciria" loading="lazy">
-                    <h1>ACiria</h1>
+                    <h1>Ciria</h1>
                 </a>
                 
             </div>

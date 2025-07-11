@@ -103,19 +103,19 @@ $(document).ready(function()
 			var homeSlider = $('.home_slider');
 			homeSlider.owlCarousel(
 			{
-				animateOut: 'fadeOutLeft',
-    			animateIn: 'fadeInRight',
-				items:1,
-				loop:true,
-				autoplay:false,
-				autoplayTimeout:8000,
-				smartSpeed:1200,
-				autoplaySpeed:1200,
-				dotsSpeed:1200,
-				mouseDrag:false,
-				nav:false,
-				dots:true,
-				margin:250
+				items: 1,
+				loop: true,
+				autoplay: true,               // Cambiado a true para reproducción automática
+				autoplayTimeout: 5000,         // 5 segundos entre transiciones
+				smartSpeed: 1000,
+				autoplayHoverPause: true,      // Pausa al hacer hover
+				nav: true,                     // Habilitar flechas de navegación
+				dots: true,                    // Mostrar puntos de navegación
+				animateOut: 'fadeOut',         // Animación más suave
+				animateIn: 'fadeIn',
+				mouseDrag: true,               // Permitir arrastre con mouse
+				touchDrag: true,              // Permitir arrastre táctil
+				margin: 0                      // Sin margen entre items
 			});
 		}
 	}
